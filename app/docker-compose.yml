@@ -1,0 +1,20 @@
+version: '3'
+
+services:    
+  app:
+    build:
+      context: ## build Docker file location
+      dockerfile: Dockerfile
+    expose:
+      - "8080"
+    environment:
+      - VIRTUAL_HOST=sampledomain.com
+      - VIRTUAL_PORT=8080
+      - LETSENCRYPT_HOST=sampledomain.com
+      - LETSENCRYPT_EMAIL=sampleemail@email.com
+    networks:
+      - nginx-proxy-network
+  
+networks:
+  nginx-proxy-network:
+    external: true
