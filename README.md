@@ -11,7 +11,9 @@ exec below commands in order.
 2. exec 'docker-compose up -d'
 
 ..then build service with nginx-proxy served environment options.
+
 Check the sample docker-compose file for service in 'app' folder.
+
 (expose port option must be declared)
 
 
